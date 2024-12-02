@@ -1,0 +1,18 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+}
+kotlin {
+    jvmToolchain(8)
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
